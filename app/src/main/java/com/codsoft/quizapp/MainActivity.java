@@ -1,6 +1,7 @@
 package com.codsoft.quizapp;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,23 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void C(View view) {
+    }
+
+    public void c_plusplus(View view) {
+    }
+
+    public void JAVA(View view) {
+    }
+
+    public void Python(View view) {
+    }
+
+    public void Kotlin(View view) {
+    }
+
+    public void HTML(View view) {
     }
 }
