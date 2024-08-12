@@ -30,5 +30,5 @@ public class questions extends AppCompatActivity {
 
 <corners android:radius = "20dp">
 </corners>
-
+..
  */
