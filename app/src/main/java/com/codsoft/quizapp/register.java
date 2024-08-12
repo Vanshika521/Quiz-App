@@ -71,7 +71,7 @@ public class register extends AppCompatActivity {
 
         //If User Get Successfully Logged In then it will redirect it to the MainActivity.xml file...
         if(fauth.getCurrentUser() != null) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), login.class);
             startActivity(intent);
             finish();
         }

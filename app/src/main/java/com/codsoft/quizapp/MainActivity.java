@@ -132,6 +132,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         public void c_plusplus (View view){
+            Intent intent= new Intent(MainActivity.this, questions.class);
+            startActivity(intent);
+            finish();
         }
 
         public void JAVA (View view){

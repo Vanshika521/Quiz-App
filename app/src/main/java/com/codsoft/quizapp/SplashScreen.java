@@ -3,6 +3,7 @@ package com.codsoft.quizapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -44,7 +45,8 @@ public class SplashScreen extends AppCompatActivity {
         logo2.setAnimation(bottom_anim);
 
 //Define Handler.... for how much time it should run in miliseconds
-        new Handler().postDelayed(new Runnable() {
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+        //new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 //register.class for registration of user...
@@ -53,7 +55,6 @@ public class SplashScreen extends AppCompatActivity {
                 finish();
             }
         },3000);
-
 
 
 
