@@ -24,13 +24,79 @@ public class questions extends AppCompatActivity {
 
 
 
-    String Cques[] = {"C","A"};
-    String Cans[] = {"A","C"};
-    String Copt[] = {"B","BB","BBB","BBBB","CC","C","CCC","CCCC"};
+    String Cques[] = {"Which of the following correctly represents a comment in C?",
+                        "Which of the following is the correct format specifier for printing an integer in C?",
+                        "Which of the following is used to terminate a C statement?",
+                        "Which of the following is not a valid variable name in C?",
+                        "Which keyword is used to define a constant in C?"};
+    String Cans[] = {"/* This is a comment */","%d",";","1number","const"};
+    String Copt[] = {"// This is a comment", "/* This is a comment */", "-- This is a comment", "# This is a comment",
+                        "%d","%c","%f","%s",
+                        ",",".",";","*",
+                        "_num","number1","1number","num_1",
+                        "static","const","define","final"
+    };
 
-    String CPques[] = {"C PLUS","AAA"};
-    String CPans[] = {"C","BB"};
-    String CPopt[] = {"CC","C","CCC","CCCC","B","BB","BBB","BBBB"};
+    String CPques[] = {"Which of the following is a correct way to declare a constant variable in C++?" ,
+                        "Which of the following is a correct way to declare a class in C++?",
+                        "Which of the following is used to allocate memory dynamically in C++?",
+                        "Which of the following is a feature of Object-Oriented Programming (OOP) in C++?",
+                        "Which of the following access specifiers are used in C++?"};
+    String CPans[] = {"All of the above", "class MyClass {};","new","All of the above","All of the above"};
+    String CPopt[] = {"const int x = 10;","int const x = 10;","#define x 10","All of the above",
+                        "class MyClass {}","class MyClass();","class MyClass {};","class MyClass []",
+                        "malloc()","calloc()","new", "free()",
+                        "Inheritance","Encapsulation","Polymorphism","All of the above",
+                        "public","private","protected","All of the above"};
+
+    String javaques[] = {"Which keyword is used to inherit a class in Java?",
+                        "Which of the following is not a primitive data type in Java?",
+                        "Which of the following is used to create an object in Java?",
+                        "Which of the following is a valid keyword in Java?",
+                        "Which of the following is the correct syntax to declare an array in Java?"};
+    String javaans[] = {"extends","String","new","interface","int[] arr = new int[5];"};
+    String javaopt[] = {"implement","inherits","extends","super",
+                        "int","float","char","String",
+                        "new","create","malloc()","alloc()",
+                        "interface","inherit","derive","finalize",
+                        "int[] arr = new int[5];","int arr = new int[5];","int arr[5] = new int[];","int arr[] = new int;"};
+
+    String pythonques[] = {"Which of the following is used to define a function in Python?",
+                            "Which of the following data types is immutable in Python?",
+                            "Which keyword is used to start a loop in Python?",
+                            "How do you create a dictionary in Python?",
+                            "Which of the following is not a keyword in Python?"};
+    String pythonans[] = {"def","tuple","while","my_dict = {}","end"};
+    String pythonopt[] = {"function","def","func","define",
+                            "list","set","dictionary","tuple",
+                            "loop","iterate","while","if",
+                            "my_dict = {}","my_dict = []","my_dict = ()","my_dict = set()",
+                            "try","finally","except","end"};
+
+
+    String kotlinques[] = {"Which of the following is the correct way to declare a variable in Kotlin?",
+                            "Which of the following is used to create a single-line comment in Kotlin?",
+                            "What is the difference between val and var in Kotlin?",
+                            "Which of the following is the correct way to define a function in Kotlin?",
+                            "Which of the following is true about Kotlin?"};
+    String kotlinans[] = {"var x: Int = 10","// This is a comment","var is mutable, val is immutable","fun myFunction() { }","Kotlin code can run on the JVM"};
+    String kotlinopt[] = {"var x: Int = 10","int x = 10","x = 10 as Int","val x = 10 as Int",
+                            "// This is a comment","/* This is a comment */","<!-- This is a comment -->","# This is a comment",
+                            "val is mutable, var is immutable","var is mutable, val is immutable","Both are mutable","Both are immutable",
+                            "fun myFunction() { }","def myFunction() { }","function myFunction() { }","void myFunction() { }",
+                            "Kotlin is not compatible with Java.","Kotlin code can run on the JVM.","Kotlin does not support functional programming.","Kotlin cannot be used for Android development."};
+
+    String htmlques[] = {"What does HTML stand for?",
+                            "Which HTML element is used to define the title of a document?",
+                            "Which of the following tags is used to create a hyperlink in HTML?",
+                            "Which HTML element is used to create a numbered list?",
+                            "Which attribute is used to specify an image source in HTML?"};
+    String htmlans[] = {"HyperText Markup Language","<title>","<a>","<ol>","src"};
+    String htmlopt[] = {"HyperText Markup Language","Home Tool Markup Language","Hyperlinks and Text Markup Language","Hyper Transfer Markup Language",
+                            "<title>","<head>","<meta>","<body>",
+                            "<a>","<link>","<href>","<hyperlink>",
+                            "<ul>","<ol>","<li>","<dl>",
+                            "link","src","href","image"};
 
 
     int flag = 0;
@@ -66,7 +132,24 @@ public class questions extends AppCompatActivity {
             question = CPques;
             answer = CPans;
             option = CPopt;
+        }else if (category.equals("Java")) {
+            question = javaques;
+            answer = javaans;
+            option = javaopt;
+        }else if (category.equals("Python")) {
+            question = pythonques;
+            answer = pythonans;
+            option = pythonopt;
+        }else if (category.equals("Kotlin")) {
+            question = kotlinques;
+            answer = kotlinans;
+            option = kotlinopt;
+        }else if (category.equals("HTML")) {
+            question = htmlques;
+            answer = htmlans;
+            option = htmlopt;
         }
+
 
         //Score ( 0 )...   ,  Question number....
         final TextView score = (TextView) findViewById(R.id.textView4);
