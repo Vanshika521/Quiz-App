@@ -98,7 +98,7 @@
         android:textColor="#FFF"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:background="@drawable/btn_design"
+
 
         />
 
@@ -150,3 +150,4 @@
 
 
 </RelativeLayout>
+

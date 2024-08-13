@@ -29,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
 
 
-    public void C(View view) {
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
                     shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Quiz App");
-                    String shareMessage= "This Is Best Application For Quiz App.\n\n";
+                    String shareMessage = "This Is Best Application For Quiz App.\n\n";
                     shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID;
 
                 }
@@ -131,21 +128,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-        public void c_plusplus (View view){
-            Intent intent= new Intent(MainActivity.this, questions.class);
-            startActivity(intent);
-            finish();
-        }
-
-        public void JAVA (View view){
-        }
-
-        public void Python (View view){
-        }
-
-        public void Kotlin (View view){
-        }
-
-        public void HTML (View view){
-        }
+    public void C(View view) {
+        Intent intent = new Intent(MainActivity.this, questions.class);
+        String a = "C";
+        intent.putExtra("CATEGORY", a);
+        startActivity(intent);
     }
+
+    public void c_plusplus(View view) {
+        Intent intent = new Intent(MainActivity.this, questions.class);
+        String a = "C++";
+        intent.putExtra("CATEGORY", a);
+        startActivity(intent);
+    }
+
+    public void JAVA(View view) {
+        Intent intent = new Intent(MainActivity.this, questions.class);
+        String a = "Java";
+        intent.putExtra("CATEGORY", a);
+        startActivity(intent);
+    }
+
+    public void Python(View view) {
+        Intent intent = new Intent(MainActivity.this, questions.class);
+        String a = "Python";
+        intent.putExtra("CATEGORY", a);
+        startActivity(intent);
+    }
+
+    public void Kotlin(View view) {
+        Intent intent = new Intent(MainActivity.this, questions.class);
+        String a = "Kotlin";
+        intent.putExtra("CATEGORY", a);
+        startActivity(intent);
+    }
+
+    public void HTML(View view) {
+        Intent intent = new Intent(MainActivity.this, questions.class);
+        String a = "HTML";
+        intent.putExtra("CATEGORY", a);
+        startActivity(intent);
+    }
+}

@@ -48,13 +48,13 @@
         <ImageView
             android:id="@+id/imageview"
             android:layout_width="0dp"
-            android:layout_height="160dp"
+            android:layout_height="140dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:src="@drawable/coding"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/textView"
-            android:src="@drawable/coding"
-           />
+            tools:layout_editor_absoluteY="-3dp"
+            tools:ignore="MissingConstraints" />
 
         <LinearLayout
             android:id="@+id/linearlayout"

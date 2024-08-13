@@ -22,6 +22,17 @@ public class questions extends AppCompatActivity {
     String answer[] = {};
     String option[] = {};
 
+
+
+    String Cques[] = {"C","A"};
+    String Cans[] = {"A","C"};
+    String Copt[] = {"B","BB","BBB","BBBB","CC","C","CCC","CCCC"};
+
+    String CPques[] = {"C PLUS","AAA"};
+    String CPans[] = {"C","BB"};
+    String CPopt[] = {"CC","C","CCC","CCCC","B","BB","BBB","BBBB"};
+
+
     int flag = 0;
 
     public static int marks = 0,correct = 0,incorrect =0;
@@ -38,11 +49,24 @@ public class questions extends AppCompatActivity {
         super.onCreate(savedInstanceState);
        // EdgeToEdge.enable(this);
         setContentView(R.layout.activity_questions);
-        /*ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+       /* ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });*/
+
+        Intent intent3 = getIntent();
+        String category = intent3.getStringExtra("CATEGORY");
+
+        if (category.equals("C")) {
+            question = Cques;
+            answer = Cans;
+            option = Copt;
+        } else if (category.equals("C++")) {
+            question = CPques;
+            answer = CPans;
+            option = CPopt;
+        }
 
         //Score ( 0 )...   ,  Question number....
         final TextView score = (TextView) findViewById(R.id.textView4);
@@ -134,6 +158,8 @@ public class questions extends AppCompatActivity {
             }
         });
 
+
     }
 }
+
 
