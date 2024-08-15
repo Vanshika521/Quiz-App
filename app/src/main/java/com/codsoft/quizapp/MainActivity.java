@@ -48,36 +48,6 @@ public class MainActivity extends AppCompatActivity {
                 R.string.close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-        /*navigationView.setNavigationItemSelectedListener(new
-                                                                 NavigationView.OnNavigationItemSelectedListener() {
-                                                                     @Override
-                                                                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                                                                         switch (item.getItemId()) {
-                                                                             // COMMON
-                                                                             case R.id.facebookPage:
-
-                                                                                 break;
-                                                                             case R.id.website:
-                                                                                 break;
-                                                                             case R.id.nav_privacy_policy:
-                                                                                 break;
-                                                                             case R.id.nav_terms_conditions:
-                                                                                 break;
-                                                                             case R.id.more:
-                                                                                 break;
-                                                                             // COMMON
-                                                                             // IMPORTANT //
-                                                                             case R.id.nav_rate:
-                                                                                 break;
-                                                                             // IMPORTANT //
-                                                                             // IMPORTANT //
-                                                                             case R.id.nav_share:
-                                                                                 break;
-                                                                             // IMPORTANT //
-                                                                         }
-                                                                         return true;
-                                                                     }
-                                                                 });*/
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -94,11 +64,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
                     // To count with Play market backstack, After pressing back button,
                     // to taken back to our application, we need to add following flags to intent.
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
-                                Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
-                                Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
-                    }
+                    goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
+                            Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
+                            Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                     try {
                         startActivity(goToMarket);
                     } catch (ActivityNotFoundException e) {
