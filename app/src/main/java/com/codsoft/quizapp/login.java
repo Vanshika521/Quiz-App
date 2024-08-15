@@ -39,24 +39,12 @@ public class login extends AppCompatActivity {
 
         fauth = FirebaseAuth.getInstance();
 
- /*       mregisterBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(login.this, "Register Button Clicked", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(login.this, register.class);
-                Toast.makeText(login.this, "I m here", Toast.LENGTH_SHORT).show();
-                startActivity(intent);
-                Toast.makeText(login.this, "Done!!!", Toast.LENGTH_SHORT).show();
-            }
-        });
-*/
+
 
         mregisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Toast.makeText(login.this, "REDIRECTING.....", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(login.this, register.class));
-                Toast.makeText(login.this, "REDIRECED!!!!!!!!!!!", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -106,15 +106,9 @@ public class MainActivity extends AppCompatActivity {
                                 Uri.parse("http://play.google.com/store/apps/details?id=" + getApplication().getPackageName())));
                     }
 
-                } else if (id == R.id.nav_share) {
-
-
-                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
-                    shareIntent.setType("text/plain");
-                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Quiz App");
-                    String shareMessage = "This Is Best Application For Quiz App.\n\n";
-                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID;
-
+                } else if (id == R.id.nav_logout) {
+                    Intent intent = new Intent(MainActivity.this, login.class);
+                    startActivity(intent);
                 }
                 return true;
             }
