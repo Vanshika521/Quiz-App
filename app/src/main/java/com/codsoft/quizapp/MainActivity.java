@@ -84,12 +84,8 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
 
-                if (id == R.id.facebookPage) {
-                    // Handle Facebook page action
 
-                } else if (id == R.id.website) {
-                    // Handle Website action
-                } else if (id == R.id.nav_privacy_policy) {
+                if (id == R.id.nav_privacy_policy) {
                     // Handle Privacy Policy action
                 } else if (id == R.id.nav_terms_conditions) {
                     // Handle Terms & Conditions action

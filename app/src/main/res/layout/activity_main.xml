@@ -29,7 +29,7 @@
             android:fontFamily="@font/li"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/imageview"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="MissingConstraints"
             />
 
         <TextView
@@ -185,7 +185,7 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="JAVA"
-                        android:textSize="24sp"
+                        android:textSize="22sp"
                         android:fontFamily="@font/li"
                         />
 
@@ -279,7 +279,7 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="KOTLIN"
-                        android:textSize="24sp"
+                        android:textSize="22sp"
                         android:fontFamily="@font/li"
                         />
 
