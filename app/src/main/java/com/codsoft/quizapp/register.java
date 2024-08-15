@@ -47,13 +47,13 @@ public class register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+      //  EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+     /*   ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
+        });*/
 //Definition
         mFullname = findViewById(R.id.fullname);
         mEmail = findViewById(R.id.email);
@@ -69,12 +69,12 @@ public class register extends AppCompatActivity {
         fauth = FirebaseAuth.getInstance() ;
         fstore = FirebaseFirestore.getInstance() ;
 
-        //If User Get Successfully Logged In then it will redirect it to the MainActivity.xml file...
+   /*     //If User Get Successfully Logged In then it will redirect it to the MainActivity.xml file...
         if(fauth.getCurrentUser() != null) {
             Intent intent = new Intent(getApplicationContext(), login.class);
             startActivity(intent);
             finish();
-        }
+        }*/
 
         //Defining Movement From register.xml to login.xml
 

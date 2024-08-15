@@ -9,60 +9,57 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity {
 
     EditText mEmail,mPassword;
     Button loginBtn;
-    TextView registerBtn;
+    TextView mregisterBtn;
     ProgressBar progressBar;
     FirebaseAuth fauth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         mEmail = findViewById(R.id.email);
         mPassword = findViewById(R.id.password);
 
-        registerBtn = findViewById(R.id.registerBtn);
+        mregisterBtn = findViewById(R.id.registerBtn);
         loginBtn = findViewById(R.id.loginBtn);
 
         progressBar = findViewById(R.id.progressbar);
 
         fauth = FirebaseAuth.getInstance();
 
-        registerBtn.setOnClickListener(new View.OnClickListener() {
+ /*       mregisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(getApplicationContext(), register.class);
+                Toast.makeText(login.this, "Register Button Clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(login.this, register.class);
+                Toast.makeText(login.this, "I m here", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
-                finish();
-
+                Toast.makeText(login.this, "Done!!!", Toast.LENGTH_SHORT).show();
             }
         });
+*/
+
+        mregisterBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // Toast.makeText(login.this, "REDIRECTING.....", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(login.this, register.class));
+                Toast.makeText(login.this, "REDIRECED!!!!!!!!!!!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override

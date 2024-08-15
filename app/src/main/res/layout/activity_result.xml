@@ -25,14 +25,14 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
         android:text="Large Text "
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
-        android:background="#003399"
+        android:layout_marginTop="160dp"
+        android:background="#009933"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/black"
@@ -44,12 +44,12 @@
         android:id="@+id/textView2"
         android:layout_below="@id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
         android:text="Large Text "
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="25dp"
         android:background="#e60000"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -62,13 +62,13 @@
         android:id="@+id/textView3"
         android:layout_below="@id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
+        android:layout_height="35dp"
         android:text="Large Text "
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
-        android:background="#009999"
+        android:layout_marginTop="25dp"
+        android:background="#003d99"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/black"
@@ -81,7 +81,7 @@
         android:id="@+id/rlayout"
         android:layout_width="170dp"
         android:layout_height="170dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_below="@id/textView3"
         android:layout_centerHorizontal="true"
 
@@ -118,13 +118,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:text="Restart"
-            android:layout_marginBottom="30dp"
-            android:background="#2196F3"
+            android:layout_marginBottom="10dp"
             android:textColor="#FFF"
             />
-
-
-
-
 
 </RelativeLayout>

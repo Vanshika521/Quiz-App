@@ -153,7 +153,7 @@ public class questions extends AppCompatActivity {
 
         //Score ( 0 )...   ,  Question number....
         final TextView score = (TextView) findViewById(R.id.textView4);
-        TextView txt = (TextView) findViewById(R.id.textView);
+        TextView txt = (TextView) findViewById(R.id.textView+1);
         Intent intent = getIntent();
         ques_no = findViewById(R.id.textView);
 
@@ -191,40 +191,42 @@ public class questions extends AppCompatActivity {
                 if(check_answer.equals(answer[flag]))
                 {
                     correct++;
-                    Toast.makeText(questions.this, "Correct Answer !!!", Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(questions.this, "Correct Answer !!!", Toast.LENGTH_SHORT).show();
                 }
 
                 else
                 {
                     incorrect--;
-                    Toast.makeText(questions.this, "Incorrect Answer !!!", Toast.LENGTH_SHORT).show();
+                 //   Toast.makeText(questions.this, "Incorrect Answer !!!", Toast.LENGTH_SHORT).show();
                 }
 
-                flag++;
+
 
                 if (score != null)
                 {
-                    score.setText(""+correct);
+                    score.setText("" + correct);
                 }
 
-                if(flag<question.length)
+                if (flag < question.length - 1)
                 {
+                    flag++; // Increment flag before setting the next question
+
                     tv.setText(question[flag]);
                     rbtnA.setText(option[flag * 4]);
                     rbtnB.setText(option[flag * 4 + 1]);
                     rbtnC.setText(option[flag * 4 + 2]);
                     rbtnD.setText(option[flag * 4 + 3]);
 
-                   // ques_no.setText(flag+"/"+question.length);
-                    ques_no.setText(flag+"/"+question.length+" Question");
+                    ques_no.setText((flag + 1) + "/" + question.length );
 
                 }
                 else
                 {
-                    marks = correct ;
-                    Intent intent1 = new Intent(questions.this , result.class);
+                    marks = correct;
+                    Intent intent1 = new Intent(questions.this, result.class);
                     startActivity(intent1);
                 }
+
 
                 rgrp.clearCheck();
 
