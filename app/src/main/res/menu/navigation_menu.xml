@@ -9,10 +9,7 @@
                 android:id="@+id/nav_rate"
                 android:icon="@drawable/rate"
                 android:title="@string/nav_rate" />
-            <item
-                android:id="@+id/nav_logout"
-                android:icon="@drawable/logout"
-                android:title="@string/nav_LogOut" />
+
             <item
                 android:id="@+id/nav_privacy_policy"
                 android:icon="@drawable/privacy"
@@ -25,6 +22,10 @@
                 android:id="@+id/more"
                 android:icon="@drawable/more"
                 android:title="@string/more" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/logout"
+                android:title="@string/nav_LogOut" />
         </menu>
     </item>
 </menu>
