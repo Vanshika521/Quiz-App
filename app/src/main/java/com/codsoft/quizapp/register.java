@@ -97,6 +97,7 @@ public class register extends AppCompatActivity {
                 final String fullname = mFullname.getText().toString();
                 final String phone = mPhone.getText().toString();
 
+
                 if(TextUtils.isEmpty(fullname)){
                     mFullname.setError("Fullname Is Required");
                     return;
@@ -116,7 +117,6 @@ public class register extends AppCompatActivity {
                     mPassword.setError("Password Must be 6 Characters Long");
                     return;
                 }
-
                 if(TextUtils.isEmpty(phone)){
                     mPhone.setError("Phone Number Is Required");
                     return;
