@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
     ActionBarDrawerToggle actionBarDrawerToggle;
     DrawerLayout drawerLayout;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
     public void C(View view) {
         Intent intent = new Intent(MainActivity.this, questions.class);
